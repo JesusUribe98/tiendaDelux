@@ -1,0 +1,42 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% block titulo %}
+Productos
+{%endblock%}
+
+
+{% block contenido%}
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+        <th scope="col">img</th>
+      <th scope="col">Sexo</th>
+      <th scope="col">Talla</th>
+      <th scope="col">Costo</th>
+        <th scope="col">Accion</th>
+    </tr>
+  </thead>
+    <tbody>
+    {% for a in productos %}
+
+    <tr class="table-info">
+
+        <td>{{a.nombre}}</td>
+        <td><image src="{{a.foto}}"/>
+        </td>
+        <td>{{a.sexo}}</td>
+        <td>{{a.talla}}</td>
+        <td>{{a.costo}}</td>
+        <td>
+				<a class="btn btn-outline-danger" href="{% url 'comprar' %}">Comprar</a>
+        </td>
+
+    </tr>
+
+    {% endfor %}
+    </tbody>
+
+</table>
+{% endblock %}

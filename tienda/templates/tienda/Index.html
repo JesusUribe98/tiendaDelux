@@ -1,0 +1,31 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% block titulo %}
+Indice
+{%endblock%}
+
+{% block contenido%}
+<div class="jumbotron">
+  <h1 class="display-3">Bienvenido a <b>HIGH DELUXE</b> Nuestra Tienda!</h1>
+  <p class="lead">Hola esta nuestra tienda en linea!.</p>
+  <hr class="my-4">
+</div>
+<center>
+<div>
+<div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+  <div class="card-header"><b>Productos</b></div>
+  <div class="card-body">
+    <h4 class="card-title">Comprar Ahora</h4>
+    <p class="card-text">Si quiere ir a la seccion de nuestros podructos,<a href="{% url 'productos' %}" class="alert-link">Dar Click Aqui!</a>.</p>
+  </div>
+</div>
+<div class="card border-info mb-3" style="max-width: 20rem;">
+  <div class="card-header"><b>Nosotros</b></div>
+  <div class="card-body">
+    <h4 class="card-title">Que somos</h4>
+    <p class="card-text">Si quiere ir a la seccion de nuestra información,<a href="{% url 'informacion' %}" class="alert-link">Dar Click Aqui!</a>.</p>
+  </div>
+</div>
+</div>
+  </center>
+{% endblock %}
